@@ -46,10 +46,17 @@ class NewDataForm extends React.Component {
     return (
       <Form onSubmit={this.props.data ? this.editData : this.createData}>
         <FormGroup>
-          <Label for="data">Data:</Label>
+          <Label for="data">Data 1:</Label>
           <Input
-            type="text"
-            name="data"
+            type="text1"
+            name="data1"
+            onChange={this.onChange}
+            value={this.defaultIfEmpty(this.state.data)}
+          />
+          <Label for="data">Data 2:</Label>
+          <Input
+            type="text2"
+            name="data2"
             onChange={this.onChange}
             value={this.defaultIfEmpty(this.state.data)}
           />
