@@ -11,7 +11,8 @@ class DataList extends Component {
       <Table dark>
         <thead>
           <tr>
-            <th>Data</th>
+            <th>Data 1</th>
+            <th>Data 2</th>
             <th></th>
           </tr>
         </thead>
@@ -23,20 +24,19 @@ class DataList extends Component {
               </td>
             </tr>
           ) : (
-            data.map(d => (
+            data.map((d) => (
               <tr key={d.pk}>
-                <td>{d.data}</td>
+                <td>{d.data1}</td>
+                <td>{d.data2}</td>
                 <td align="center">
-                  <NewDataModal
-                    create={false}
-                    data={d}
-                    resetState={this.props.resetState}
-                  />
+                <NewDataModal
+  create={false}
+  data1={d.data1}
+  data2={d.data2}
+  resetState={this.props.resetState}
+/>
                   &nbsp;&nbsp;
-                  <ConfirmRemovalModal
-                    pk={d.pk}
-                    resetState={this.props.resetState}
-                  />
+                  <ConfirmRemovalModal pk={d.pk} resetState={this.props.resetState} />
                 </td>
               </tr>
             ))

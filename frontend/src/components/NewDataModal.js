@@ -39,11 +39,12 @@ class NewDataModal extends Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>{title}</ModalHeader>
           <ModalBody>
-            <NewDataForm
-              resetState={this.props.resetState}
-              toggle={this.toggle}
-              data={this.props.data}
-            />
+          <NewDataForm
+  resetState={this.props.resetState}
+  toggle={this.toggle}
+  data1={this.props.data1}
+  data2={this.props.data2}
+/>
           </ModalBody>
         </Modal>
       </Fragment>
